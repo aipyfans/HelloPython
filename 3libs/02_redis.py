@@ -31,6 +31,10 @@ print(redis.exists('name'))
 print("判断键类型")
 print(redis.type('name'))
 
+print("如果不存在这个键值对，则更新value，否则不变")
+print(redis.setnx('name', 'lee'))
+print(redis.get('name'))
+
 print("获取所有符合规则的键")
 print(redis.keys('*'))
 
